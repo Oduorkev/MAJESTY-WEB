@@ -157,22 +157,25 @@ a {
 }
 
 .nav__list {
-  display: flex;
-  gap: 0.25rem; /* Reduce space between items */
+  display: flexbox; /* Ensures the list items are in a row */
+  gap: 2rem; /* Controls spacing between nav links */
+  justify-content: space-between; /* Adjusts alignment */
 }
+
 
 .nav__link {
-  color: var(--white-color);
-  background-color: #e64545;
-  font-weight: var(--font-semi-bold);
-  padding: 1rem 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color .3s;
-  width: 100px;
-}
+  cursor: pointer; /* Shows a pointer on hover */
+  color: var(--white-color); /* Text color */
+  background-color: transparent; /* Transparent background */
+  font-weight: bold; /* Bold text */
+  padding: 0.5rem; /* Adjust padding to reduce the "boxy" appearance */
+  text-decoration: none;
+  display: flex; /* Ensures the element adjusts to content size */
+  align-items: center; /* Aligns text and icons vertically */
+ margin-left: 30px;
+ 
 
+}
 
 /* Show menu */
 .show-menu {
@@ -188,15 +191,20 @@ a {
   cursor: pointer;
 }
 
-.dropdown__arrow {
-  font-size: 1.25rem;
-  font-weight: initial;
-  transition: transform .4s;
+
+.dropdown__link {
+  padding: 1.25rem;
+  color: black;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color .3s;
 }
 
-.dropdown__link, 
 .dropdown__sublink {
-  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  padding: 1rem;
   color: black;
   background-color: #fff;
   display: flex;
@@ -239,7 +247,7 @@ a {
 }
 
 .dropdown__sublink {
-  color: #e64545;
+  color: #0f0e0e;
 }
 
 /*=============== BREAKPOINTS ===============*/
